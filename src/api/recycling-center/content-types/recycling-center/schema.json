@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recycling_centers",
+  "info": {
+    "singularName": "recycling-center",
+    "pluralName": "recycling-centers",
+    "displayName": "recycling-center",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "contact_no": {
+      "type": "string",
+      "unique": false
+    },
+    "rating": {
+      "min": 1,
+      "max": 5,
+      "type": "integer"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "recycling_centers"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    }
+  }
+}

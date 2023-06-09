@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_location_locations",
+  "info": {
+    "displayName": "location"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
