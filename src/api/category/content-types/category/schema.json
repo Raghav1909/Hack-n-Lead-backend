@@ -22,6 +22,11 @@
       "relation": "manyToMany",
       "target": "api::recycling-center.recycling-center",
       "mappedBy": "categories"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
     }
   }
 }
